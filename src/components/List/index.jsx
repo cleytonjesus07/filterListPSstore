@@ -19,7 +19,7 @@ export default function List() {
                 ? <span className="block px-40">Nenhum título encontrado</span>
                 :
                 (
-                    <div className="px-20 flex justify-center ">
+                    <div className="max-md:px-5 px-20 flex justify-center ">
                         <ul className=" grid max-md:grid-cols-1 grid-cols-3 ">
                             {currentList.map(({ id, cover, title, type, platform, price, available }, i) => {
                                 return (

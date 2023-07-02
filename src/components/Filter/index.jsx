@@ -12,7 +12,7 @@ export default function Filter() {
     const callFilter = useGamesListStore((state) => state.callFilter);
 
     return (
-        <div className=" flex justify-between items-center  px-32 w-full bg-black bg-opacity-50 border-t border-b border-white">
+        <div className="  flex justify-between items-center  px-32 w-full bg-black bg-opacity-50 border-t border-b border-white">
             <div className="relative flex items-center border-l-[1px] border-r-[1px] w-auto">
                 <select defaultValue={key} className="  p-3 w-40  text-lg bg-transparent  outline-none cursor-pointer appearance-none  " onChange={({ target: { value } }) => setKey(value)}>
                     {categories.map((type, i) => <option key={i} className="bg-black " value={type}>{firstLetterToUpperCase(type)}</option>)}
@@ -31,3 +31,4 @@ export default function Filter() {
         </div>
     )
 }
+

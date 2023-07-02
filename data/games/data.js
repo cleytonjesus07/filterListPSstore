@@ -1,7 +1,7 @@
 export default [
     {
         id: "game1",
-        cover: "https://th.bing.com/th/id/R.551e1b4cef090685f3219c461ad0172b?rik=Lxhfb%2bgJ2%2fl4Kg&riu=http%3a%2f%2fwww.mobygames.com%2fimages%2fcovers%2fl%2f15504-metal-gear-solid-windows-front-cover.jpg&ehk=PfJfWy2UUZJ2cmXYXofVM4c0JQbgZDkiPVpYiGmBcEI%3d&risl=&pid=ImgRaw&r=0",
+        cover: "https://th.bing.com/th/id/OIP.CRkId5uP3mRo8cMOWsOxIgHaHV?pid=ImgDet&rs=1",
         title: "Metal Gear Solid",
         type: "Full Game",
         platform: "PS1",
@@ -98,6 +98,15 @@ export default [
         type: "Full Game",
         platform: "PS4/PS5",
         price: { current: 12.50 },
+        available: true
+    },
+    {
+        id: "game12",
+        cover: "https://cdn1.epicgames.com/offer/611482b8586142cda48a0786eb8a127c/EGS_DeadbyDaylight_BehaviourInteractive_S2_1200x1600-a1c30209e3b9fb63144daa9b5670f503",
+        title: "Dead By Daylight",
+        type: "Full Game",
+        platform: "PS4/PS5",
+        price: { current: 42.40 },
         available: true
     }
 ];
