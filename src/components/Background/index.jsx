@@ -18,12 +18,8 @@ export default function Background({ mainRef }) {
     return (
         <video
             ref={videoBgRef}
-            className="fixed top-0 bottom-0 right-0 left-0 -z-10 opacity-0 showBg"
-            onPlay={({ target }) => {
-                if (!target.paused) {
-                    mainRef?.current.setAttribute("class", "show");
-                }
-            }}
+            className="fixed top-0 bottom-0 right-0 left-0 -z-10 invisible showBg"
+            onCanPlay={() => mainRef?.current.setAttribute("class", "show")}
         >
             <source src={videoSrc} type="video/mp4"></source>
         </video>

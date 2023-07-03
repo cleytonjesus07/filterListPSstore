@@ -18,11 +18,8 @@ html {
 
 }
 
-
-
-
 .show {
-  animation: fadeIn forwards ease-in-out 2s !important;
+  animation: fadeIn forwards ease-in-out 1s !important;
   animation-delay: 3s;
 }
 
@@ -34,10 +31,12 @@ html {
 
 @keyframes fadeIn {
   from {
+    visibility: hidden;
     opacity: 0;
   }
 
   to {
+    visibility: visible;
     opacity: 1;
   }
 }

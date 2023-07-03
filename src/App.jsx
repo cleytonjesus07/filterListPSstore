@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <Background mainRef={mainRef} />
-      <main className='opacity-0' ref={mainRef}>
+      <main className='invisible' ref={mainRef}>
         <Cart />
         <TopMenu />
         {/* <Filter /> Fazer versão mobile*/}
