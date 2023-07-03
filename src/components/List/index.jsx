@@ -23,6 +23,7 @@ export default function List() {
                     <div className="max-md:px-5 px-20 flex justify-center ">
                         <ul className=" grid max-md:grid-cols-1 grid-cols-3 ">
                             {currentList.map(({ id, cover, title, type, platform, price, available }, i) => {
+
                                 return (
                                     <motion.li
                                         key={id}
@@ -36,7 +37,7 @@ export default function List() {
                                         animate={animations.toShow}
                                         exit={animations.toHide}
                                         className="bg-black bg-opacity-60 p-1 mx-2 my-5 h-40 w-[350px] hover:border-[1.5px] border-white cursor-pointer">
-                                        <Card cover={cover} title={title} type={type} platform={platform} price={price} available={available} />
+                                        <Card id={id} cover={cover} title={title} type={type} platform={platform} price={price} available={available} />
                                     </motion.li>
                                 )
                             })}

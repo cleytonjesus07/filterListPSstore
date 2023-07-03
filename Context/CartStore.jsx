@@ -31,6 +31,7 @@ export const useCartStore = create((set, get) => (
             (!get().scrollDown) && get().setScrollDown(true);
             showCartForFistTime = false;
             get().setAmount(price.current);
+
             saveLocalStorage("cart", get().cart);
 
         },

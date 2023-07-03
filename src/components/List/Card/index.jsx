@@ -1,6 +1,11 @@
 
+import { BsCart4 } from "react-icons/bs"
 import CustomSkeleton from "./CustomSkeleton";
 import FormatedPrice from "./FormatedPrice";
+import { useCartStore } from "../../../../Context/CartStore";
+import { useGamesListStore } from "../../../../Context/KeyStore";
+import { useEffect } from "react";
+import { useState } from "react";
 
 export default function Card(props) {
 
@@ -12,7 +17,13 @@ export default function Card(props) {
 }
 
 function Content({ props }) {
-    const { cover, title, type, platform, price, status, available } = props;
+    const [inCart, setInCart] = useState(false);
+    const cart = (useCartStore((state) => state.cart))
+    const { id, cover, title, type, platform, price, status, available } = props;
+    const IsProductInCart = (find) => setInCart((find > 0) ? true : false);
+
+
+    useEffect(() => IsProductInCart(cart.filter((prod) => (prod?.id === id)).length), [cart])
     return (
         <div className="flex h-full w-auto">
             <div className=" relative flex-1 overflow-hidden" >
@@ -32,6 +43,14 @@ function Content({ props }) {
                     <span className="text-gray-300 font-thin text-sm mb-1">{platform}</span>
                     <FormatedPrice price={price} available={available} />
                 </div>
+                {inCart && (
+                    <div className=" justify-end items-center text-[.7em]  space-x-2 inline-flex">
+                        <BsCart4 className="w-3 h-3" />
+                        <span>Added to cart</span>
+                    </div>
+                )}
+
+
             </div>
         </div>
     )
