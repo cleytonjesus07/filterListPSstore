@@ -19,7 +19,7 @@ export default function Cart() {
     const lockScrollScreen = () => {
         let scrollStatus = "";
         if (window.innerWidth <= 768) {
-            scrollStatus = (!isOpenCart) ? "auto" : "hidden";
+            scrollStatus = (isOpenCart) ? "hidden" : "auto";
             document.body.style.overflow = scrollStatus;
         }
     }

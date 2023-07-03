@@ -1,9 +1,10 @@
-import { useGamesListStore } from "../../../Context/GamesStore"
+
+
 import { motion } from "framer-motion"
 import Card from "./Card";
 import { AnimatePresence } from "framer-motion";
-import Cart from "../Cart";
 import { useCartStore } from "../../../Context/CartStore";
+import { useGamesListStore } from "../../../Context/KeyStore";
 
 const animations = {
     toHide: { display: "none", scale: 0 },
@@ -43,7 +44,6 @@ export default function List() {
                     </div>
                 )
             }
-
         </AnimatePresence>
     )
 }

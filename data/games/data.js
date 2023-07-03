@@ -80,7 +80,7 @@ export default [
         type: "Full Game",
         platform: "PS4/PS5",
         price: { current: 0 },
-        available: true
+        available: false
     },
     {
         id: "game10",
