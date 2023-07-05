@@ -1,5 +1,3 @@
-
-
 import { motion } from "framer-motion"
 import Card from "./Card";
 import { AnimatePresence } from "framer-motion";
@@ -12,8 +10,10 @@ const animations = {
 }
 
 export default function List() {
-    const currentList = useGamesListStore((state) => state.currentList);
+
+    const currentList = useGamesListStore((state) => (state.currentList));
     const addToCart = useCartStore((state) => state.addToCart);
+
     return (
         <AnimatePresence mode="wait">
             {(currentList?.length <= 0)
@@ -23,7 +23,6 @@ export default function List() {
                     <div className="max-md:px-5 px-20 flex justify-center ">
                         <ul className=" grid max-md:grid-cols-1 grid-cols-3 ">
                             {currentList.map(({ id, cover, title, type, platform, price, available }, i) => {
-
                                 return (
                                     <motion.li
                                         key={id}

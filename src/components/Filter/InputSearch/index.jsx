@@ -35,9 +35,9 @@ export default function InputSearchFilter({ active, setActive }) {
             <button onClick={() => setActive(false)} className="absolute top-3 right-5 opacity-50 hover:opacity-100 !cursor-pointer text-xl">X</button>
             <input onChange={({ target: { value } }) => filterTimeout(value)} className="bg-transparent !cursor-text border-b-[1px] border-gray-400 hover:border-gray-50 transition-all ease-linear w-full outline-none" placeholder="Pesquisar por título" />
             <div className={`w-full flex justify-center items-center space-x-5 pt-5 ${searching ? "visible" : "invisible"}`}>
-                <span className="bg-white w-1 h-1 rounded-full animate-bounce" id="left-ball"></span>
-                <span className="bg-white w-1 h-1 rounded-full animate-bounce" id="center-ball"></span>
-                <span className="bg-white w-1 h-1 rounded-full animate-bounce" id="right-ball"></span>
+                <span className="bg-white w-2 h-2 rounded-full animate-bounce" id="left-ball"></span>
+                <span className="bg-white w-2 h-2 rounded-full animate-bounce" id="center-ball"></span>
+                <span className="bg-white w-2 h-2 rounded-full animate-bounce" id="right-ball"></span>
             </div>
         </motion.div>
     )

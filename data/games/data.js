@@ -108,5 +108,14 @@ export default [
         platform: "PS4/PS5",
         price: { current: 42.40 },
         available: true
+    },
+    {
+        id: "game13",
+        cover: "https://th.bing.com/th/id/OIP.7YpdphlhDFHepGJ-qPnDzQHaLH?pid=ImgDet&rs=1",
+        title: "Call Of Duty - Warzone",
+        type: "Full Game",
+        platform: "PS4/PS5",
+        price: { current: 0 },
+        available: true
     }
 ];

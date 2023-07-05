@@ -1,5 +1,11 @@
 import { useCartStore } from "../../../../Context/CartStore";
 import { formatedPrice } from "../../../../utils/formatPrices";
+import { motion } from "framer-motion"
+
+const animation = {
+    hide: { visibility: "hidden", opacity: 0 },
+    show: { visibility: "visible", opacity: 1 }
+}
 
 export default function BodyCart({ cart }) {
     const { length } = cart;
@@ -14,7 +20,12 @@ export default function BodyCart({ cart }) {
             <CloseButton />
             <ul className="grid grid-cols-1 gap-5">
                 {cart.map(({ id, title, cover, price, platform }) => (
-                    <li className="flex flex-col  w-full border-b-[1px] last-of-type:border-b-0  pb-2 ">
+                    <motion.li
+                        key={id}
+                        className="flex flex-col  w-full border-b-[1px] last-of-type:border-b-0  pb-2 "
+                        initial={animation.hide}
+                        animate={animation.show}
+                    >
                         <div className="flex">
                             <div className="h-20 w-20">
                                 <img src={cover} className="object-cover object-top w-full h-full" />
@@ -28,7 +39,7 @@ export default function BodyCart({ cart }) {
                         <div className="block text-right">
                             <button onClick={() => removeToCart(id)} className="text-sm opacity-50 hover:opacity-100">Remover</button>
                         </div>
-                    </li>
+                    </motion.li>
                 ))}
             </ul>
         </>
